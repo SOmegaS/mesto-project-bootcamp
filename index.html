@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="html" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>Mesto</title>
+</head>
+<body class="page">
+<header class="header">
+    <img class="header__logo" src="images/logo.svg" alt="logo">
+</header>
+<section class="profile">
+    <img src="images/avatar.png" alt="avatar" class="profile__avatar">
+    <div class="profile__info">
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <button class="profile__edit-button"></button>
+        <p class="profile__quote">Исследователь океана</p>
+    </div>
+    <button class="profile__add-button"><img src="images/add-button.svg" alt="add button"></button>
+</section>
+<section class="card-list">
+    <div class="card">
+        <img class="card__image" src="images/image-1.png" alt="image">
+        <div class="card__sign">
+            <p class="card__title">Карачаевск</p>
+            <button class="card__like"></button>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card__image" src="images/image-2.png" alt="image">
+        <div class="card__sign">
+            <p class="card__title">Гора Эльбрус</p>
+            <button class="card__like"></button>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card__image" src="images/image-3.png" alt="image">
+        <div class="card__sign">
+            <p class="card__title">Домбай</p>
+            <button class="card__like"></button>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card__image" src="images/image-4.png" alt="image">
+        <div class="card__sign">
+            <p class="card__title">Гора Эльбрус</p>
+            <button class="card__like"></button>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card__image" src="images/image-5.png" alt="image">
+        <div class="card__sign">
+            <p class="card__title">Домбай</p>
+            <button class="card__like"></button>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card__image" src="images/image-6.png" alt="image">
+        <div class="card__sign">
+            <p class="card__title">Карачаевск</p>
+            <button class="card__like"></button>
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <p class="footer__title">© 2020 Mesto Russia</p>
+</footer>
+<div class="popup">
+    <button class="popup__button-close"><img class="popup__image-close" src="images/close-icon.svg" alt="close"></button>
+    <div class="popup__content">
+        <p class="popup__title">Редактировать профиль</p>
+        <form action="#" method="post">
+            <label>
+                <input class="popup__name" type="text" name="name">
+            </label>
+            <label>
+                <input class="popup__quote" type="text" name="quote">
+            </label>
+            <button class="popup__submit">Сохранить</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

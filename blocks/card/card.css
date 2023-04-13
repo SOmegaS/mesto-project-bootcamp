@@ -1,0 +1,8 @@
+.card {
+    font-family: 'Inter', system-ui;
+    font-style: normal;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 282px;
+    height: 361px;
+}

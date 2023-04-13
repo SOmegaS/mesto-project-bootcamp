@@ -1,0 +1,22 @@
+.card__like {
+    margin: 30px 15px 0 0;
+    width: 22px;
+    height: 19px;
+    background-image: url("../../../images/like.svg");
+    background-color: white;
+    border: 0;
+}
+
+.card__like:hover {
+    background-image: url("../../../images/like:hover.svg");
+}
+
+.card__like:active {
+    background-image: url("../../../images/like:active.svg");
+}
+
+@media (max-width: 580px) {
+    .card__like {
+        margin: 30px 20px 0 0;
+    }
+}
