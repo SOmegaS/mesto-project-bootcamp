@@ -2,7 +2,7 @@
     margin: 40px auto 0;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 596px) {
     .popup__input_first {
         margin: 66px auto 0;
     }

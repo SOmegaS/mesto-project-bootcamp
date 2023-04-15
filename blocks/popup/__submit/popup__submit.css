@@ -17,7 +17,7 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media (max-width: 580px) {
+@media (max-width: 596px) {
     .popup__submit {
         width: 238px;
         height: 46px;

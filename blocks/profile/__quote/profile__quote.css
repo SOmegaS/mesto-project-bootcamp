@@ -13,13 +13,13 @@
     max-width: 570px;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 895px) {
     .profile__quote {
         max-width: 280px;
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 596px) {
     .profile__quote {
         font-size: 14px;
         line-height: 17px;

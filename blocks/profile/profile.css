@@ -13,13 +13,13 @@
     align-items: center;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 895px) {
     .profile {
         width: 580px;
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 596px) {
     .profile {
         width: 320px;
         padding-top: 42px;

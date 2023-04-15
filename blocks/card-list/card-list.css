@@ -7,14 +7,14 @@
     padding-top: 50px;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 895px) {
     .card-list {
         width: 580px;
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 596px) {
     .card-list {
         grid-template-columns: 1fr;
         max-width: 282px;

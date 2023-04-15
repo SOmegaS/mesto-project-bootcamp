@@ -2,7 +2,7 @@
     padding: 2px 0 0 30px;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 596px) {
     .profile__info {
         box-sizing: border-box;
         padding: 26px 0 0 0;
