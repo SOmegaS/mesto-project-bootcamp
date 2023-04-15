@@ -1,10 +1,11 @@
 .profile__add-button {
     height: 50px;
     width: 150px;
-    background-color: black;
+    background-color: transparent;
     border: 2px solid white;
     border-radius: 2px;
     padding: 0;
+    cursor: pointer;
 }
 
 .profile__add-button:hover {
@@ -15,6 +16,5 @@
     .profile__add-button {
         margin-top: 32px;
         width: 282px;
-        display: block;
     }
 }

@@ -8,13 +8,19 @@
     grid-row: 2;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 100%;
     text-overflow: ellipsis;
+    box-sizing: border-box;
+    max-width: 570px;
+}
+
+@media (max-width: 880px) {
+    .profile__quote {
+        max-width: 280px;
+    }
 }
 
 @media (max-width: 580px) {
     .profile__quote {
-        font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         text-align: center;

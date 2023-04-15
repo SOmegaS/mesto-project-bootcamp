@@ -3,7 +3,10 @@
     border: 0;
     width: 32px;
     height: 32px;
-    margin: 153px 0 0 464px;
+    position: relative;
+    left: 430px;
+    top: -41px;
+    cursor: pointer;
 }
 
 .popup__button-close:hover {
@@ -14,6 +17,7 @@
     .popup__button-close {
         width: 20px;
         height: 20px;
-        margin: 86px 0 0 247px;
+        left: 254px;
+        top: -38px;
     }
 }
