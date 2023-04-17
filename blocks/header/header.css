@@ -1,5 +1,5 @@
 .header {
-    width: 880px;
+    max-width: 880px;
     padding: 45px 0 35px 0;
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
     box-sizing: border-box;
@@ -7,13 +7,13 @@
 
 @media (max-width: 895px) {
     .header {
-        width: 580px;
+        max-width: 580px;
     }
 }
 
 @media (max-width: 596px) {
     .header {
         padding: 28px 0 25px 27px;
-        width: 320px;
+        max-width: 320px;
     }
 }

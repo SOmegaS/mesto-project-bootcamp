@@ -2,14 +2,14 @@
     display: grid;
     column-gap: 17px;
     row-gap: 20px;
-    width: 880px;
+    max-width: 880px;
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 50px;
 }
 
 @media (max-width: 895px) {
     .card-list {
-        width: 580px;
+        max-width: 580px;
         grid-template-columns: 1fr 1fr;
     }
 }

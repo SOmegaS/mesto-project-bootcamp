@@ -1,5 +1,12 @@
 .profile__info {
     padding: 2px 0 0 30px;
+    width: 580px;
+}
+
+@media (max-width: 895px) {
+    .profile__info {
+        width: 280px;
+    }
 }
 
 @media (max-width: 596px) {

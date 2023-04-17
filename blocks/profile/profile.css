@@ -1,12 +1,7 @@
 .profile {
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    /* Абсолютно не согласен! */
-    /* Наоборот при выставлении max-width контейнер начинает непредсказуемо себя вести */
-    /* Я точно знаю, что при недостаточном размере экрана будет выполнен @media запрос */
-    /* А других условий для уменьшения размера (браузером) я не вижу */
-    /* При этом, если поставить выставить max-width, то браузер может сжать блок, когда это не требуется */
-    width: 880px;
+    max-width: 880px;
     padding-top: 40px;
     display: grid;
     grid-template-columns: 120px 1fr 150px;
@@ -15,13 +10,13 @@
 
 @media (max-width: 895px) {
     .profile {
-        width: 580px;
+        max-width: 580px;
     }
 }
 
 @media (max-width: 596px) {
     .profile {
-        width: 320px;
+        max-width: 320px;
         padding-top: 42px;
         display: flex;
         flex-direction: column;

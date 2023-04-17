@@ -4,11 +4,19 @@
     line-height: 22px;
     color: #545454;
     margin: 0;
+    width: 880px;
+}
+
+@media (max-width: 895px) {
+    .footer__title {
+        width: 580px;
+    }
 }
 
 @media (max-width: 596px) {
     .footer__title {
         font-size: 14px;
         line-height: 17px;
+        width: 320px;
     }
 }
