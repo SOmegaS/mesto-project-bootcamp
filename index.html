@@ -12,6 +12,7 @@
 <header class="header">
     <img class="header__logo" src="images/logo.svg" alt="Лого">
 </header>
+<main>
 <section class="profile">
     <img src="images/avatar.png" alt="Аватарка" class="profile__avatar">
     <div class="profile__info">
@@ -21,63 +22,31 @@
     </div>
     <button aria-label="Добавить публикацию" type="button" class="profile__add-button"><img class="profile__add-image" src="images/add-button.svg" alt="Добавить"></button>
 </section>
-<section class="card-list">
-    <article class="card">
-        <img class="card__image" src="images/image-1.png" alt="Картинка">
-        <div class="card__sign">
-            <h4 class="card__title">Карачаевск</h4>
-            <button aria-label="Лайк" type="button" class="card__like"></button>
+<section class="card-list"></section>
+    <div class="popup">
+        <div class="popup__container">
+            <button aria-label="Закрыть" type="button" class="popup__button-close"><img class="popup__image-close" src="images/close-icon.svg" alt="Крестик"></button>
+            <h3 class="popup__title">Редактировать профиль</h3>
+            <form name="edit" action="#" method="post">
+                <input class="popup__input popup__input_first" type="text" name="name">
+                <input class="popup__input" type="text" name="quote">
+                <button aria-label="Сохранить" type="submit" class="popup__submit">Сохранить</button>
+            </form>
         </div>
-    </article>
-    <article class="card">
-        <img class="card__image" src="images/image-2.png" alt="Картинка">
-        <div class="card__sign">
-            <h4 class="card__title">Гора Эльбрус</h4>
-            <button aria-label="Лайк" type="button" class="card__like"></button>
-        </div>
-    </article>
-    <article class="card">
-        <img class="card__image" src="images/image-3.png" alt="Картинка">
-        <div class="card__sign">
-            <h4 class="card__title">Домбай</h4>
-            <button aria-label="Лайк" type="button" class="card__like"></button>
-        </div>
-    </article>
-    <article class="card">
-        <img class="card__image" src="images/image-4.png" alt="Картинка">
-        <div class="card__sign">
-            <h4 class="card__title">Гора Эльбрус</h4>
-            <button aria-label="Лайк" type="button" class="card__like"></button>
-        </div>
-    </article>
-    <article class="card">
-        <img class="card__image" src="images/image-5.png" alt="Картинка">
-        <div class="card__sign">
-            <h4 class="card__title">Домбай</h4>
-            <button aria-label="Лайк" type="button" class="card__like"></button>
-        </div>
-    </article>
-    <article class="card">
-        <img class="card__image" src="images/image-6.png" alt="Картинка">
-        <div class="card__sign">
-            <h4 class="card__title">Карачаево-Черкессия</h4>
-            <button aria-label="Лайк" type="button" class="card__like"></button>
-        </div>
-    </article>
-</section>
+    </div>
+</main>
 <footer class="footer">
     <p class="footer__title">© 2020 Mesto Russia</p>
 </footer>
-<div class="popup">
-    <div class="popup__container">
-        <button aria-label="Закрыть" type="button" class="popup__button-close"><img class="popup__image-close" src="images/close-icon.svg" alt="Крестик"></button>
-        <h3 class="popup__title">Редактировать профиль</h3>
-        <form name="edit" action="#" method="post">
-            <input class="popup__input popup__input_first" type="text" name="name">
-            <input class="popup__input" type="text" name="quote">
-            <button aria-label="Сохранить" type="submit" class="popup__submit">Сохранить</button>
-        </form>
-    </div>
-</div>
+<template id="template-card">
+    <article class="card">
+        <img class="card__image" src="images/image-1.png" alt="Картинка">
+        <div class="card__sign">
+            <h2 class="card__title">Карачаевск</h2>
+            <button aria-label="Лайк" type="button" class="card__like"></button>
+        </div>
+    </article>
+</template>
+<script src="index.js"></script>
 </body>
 </html>

@@ -1,11 +1,12 @@
 .profile__info {
     padding: 2px 0 0 30px;
-    width: 580px;
+    max-width: 580px;
+    width: 100%;
 }
 
 @media (max-width: 895px) {
     .profile__info {
-        width: 280px;
+        max-width: 280px;
     }
 }
 
@@ -13,7 +14,7 @@
     .profile__info {
         box-sizing: border-box;
         padding: 26px 0 0 0;
-        width: 282px;
+        max-width: 282px;
         text-align: center;
     }
 }

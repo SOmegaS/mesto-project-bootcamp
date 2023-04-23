@@ -1,4 +1,4 @@
-@import "../vendor/fonts/inter.css";
+@import "../vendor/fonts/fonts.css";
 @import "../blocks/html/html.css";
 @import "../blocks/page/page.css";
 @import "../blocks/header/header.css";
@@ -19,10 +19,10 @@
 @import "../blocks/card/__title/card__title.css";
 @import "../blocks/card/__like/card__like.css";
 @import "../blocks/footer/footer.css";
-@import "../blocks/footer/__title/footer_title.css";
+@import "../blocks/footer/__title/footer__title.css";
 @import "../blocks/popup/popup.css";
 @import "../blocks/popup/_opened/popup_opened.css";
-@import "../blocks/popup/__content/popup__content.css";
+@import "../blocks/popup/__container/popup__container.css";
 @import "../blocks/popup/__button-close/popup__button-close.css";
 @import "../blocks/popup/__image-close/popup__image-close.css";
 @import "../blocks/popup/__title/popup__title.css";
