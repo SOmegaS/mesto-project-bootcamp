@@ -3,6 +3,7 @@
     width: 430px;
     border-radius: 10px;
     margin: auto;
+    position: relative;
 }
 
 @media (max-width: 596px) {

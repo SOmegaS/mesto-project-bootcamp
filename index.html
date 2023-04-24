@@ -23,7 +23,7 @@
     <button aria-label="Добавить публикацию" type="button" class="profile__add-button"><img class="profile__add-image" src="images/add-button.svg" alt="Добавить"></button>
 </section>
 <section class="card-list"></section>
-    <div class="popup popup_profile-edit">
+    <div class="popup popup-profile-edit">
         <div class="popup__container">
             <button aria-label="Закрыть" type="button" class="popup__button-close"><img class="popup__image-close" src="images/close-icon.svg" alt="Крестик"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
@@ -34,7 +34,7 @@
             </form>
         </div>
     </div>
-    <div class="popup popup_add-card">
+    <div class="popup popup-add-card">
         <div class="popup__container">
             <button aria-label="Закрыть" type="button" class="popup__button-close"><img class="popup__image-close" src="images/close-icon.svg" alt="Крестик"></button>
             <h3 class="popup__title">Новое место</h3>
@@ -45,6 +45,15 @@
             </form>
         </div>
     </div>
+    <div class="popup popup-overview">
+        <div class="popup__container popup__container_color_transparent popup__container_wide">
+            <button aria-label="Закрыть" type="button" class="popup__button-close"><img class="popup__image-close" src="images/close-icon.svg" alt="Крестик"></button>
+            <figure class="popup__figure">
+                <img class="popup__image" src="images/image-1.png" alt="Картинка">
+                <figcaption class="popup__title popup__title_small">Подпись</figcaption>
+            </figure>
+        </div>
+    </div>
 </main>
 <footer class="footer">
     <p class="footer__title">© 2020 Mesto Russia</p>
@@ -52,6 +61,7 @@
 <template id="template-card">
     <article class="card">
         <img class="card__image" src="images/image-1.png" alt="Картинка">
+        <button aria-label="Удалить" type="button" class="card__delete"></button>
         <div class="card__sign">
             <h2 class="card__title">Карачаевск</h2>
             <button aria-label="Лайк" type="button" class="card__like"></button>
