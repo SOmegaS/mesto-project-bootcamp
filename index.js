@@ -1,4 +1,4 @@
-import "./cards.js"
+import {initialCards} from "./cards.js";
 
 const profile = document.querySelector('.profile');
 const buttonEdit = profile.querySelector('.profile__edit-button');
@@ -86,7 +86,7 @@ function setDelete(card) {
 }
 
 function initCards() {
-    initialCards.forEach(renderCard(initialCards[cardInfo]));
+    initialCards.forEach(renderCard);
 }
 
 function submitFormAddCard(event) {
