@@ -27,13 +27,16 @@
 @import "../blocks/popup/__container/popup__container.css";
 @import "../blocks/popup/__container/_wide/popup__container_wide.css";
 @import "../blocks/popup/__container/_color_transparent/popup__container_color_transparent.css";
+@import "../blocks/popup/__error/popup__error.css";
 @import "../blocks/popup/__button-close/popup__button-close.css";
 @import "../blocks/popup/__figure/popup__figure.css";
 @import "../blocks/popup/__image-close/popup__image-close.css";
 @import "../blocks/popup/__title/popup__title.css";
 @import "../blocks/popup/__title/_small/popup__title_small.css";
 @import "../blocks/popup/__input/popup__input.css";
+@import "../blocks/popup/__input/_error/popup__input_error.css";
 @import "../blocks/popup/__input/_first/popup__input_first.css";
 @import "../blocks/popup/__submit/popup__submit.css";
+@import "../blocks/popup/__submit/_disabled/popup__submit_disabled.css";
 
 /** { outline: 1px solid yellow; }*/
