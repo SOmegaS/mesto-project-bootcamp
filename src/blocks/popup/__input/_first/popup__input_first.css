@@ -1,0 +1,9 @@
+.popup__input_first {
+    margin: 40px auto 0;
+}
+
+@media (max-width: 596px) {
+    .popup__input_first {
+        margin: 51px auto 0;
+    }
+}
