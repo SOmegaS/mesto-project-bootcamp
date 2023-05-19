@@ -1,4 +1,4 @@
-import { popupOverview } from "./index.js";
+import { popupOverview, domImage } from "./index.js";
 import { openPopup } from "./modal.js";
 
 const cardList = document.querySelector('.card-list');
@@ -51,11 +51,10 @@ export function createCard(cardInfo) {
             setDelete(newCard);
         }
     )
-    const image = newCard.querySelector('.card__image');
-    image.addEventListener(
+    cardImage.addEventListener(
         'click',
         () => {
-            openPopupOverview(image.src);
+            openPopupOverview(cardImage.src, cardImage.alt);
         }
     )
     return newCard;
@@ -78,9 +77,8 @@ function setLike(buttonLike) {
     buttonLike.classList.toggle('card__like_active');
 }
 
-function openPopupOverview(image) {
+function openPopupOverview(image, alt) {
     openPopup(popupOverview);
-    const domImage = popupOverview.querySelector('.popup__image');
     domImage.src = image;
-    domImage.alt = "картинка";
+    domImage.alt = alt;
 }

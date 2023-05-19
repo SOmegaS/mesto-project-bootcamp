@@ -1,46 +1,51 @@
+import {data} from "autoprefixer";
+
 function hasValidInput(inputList) {
     let isOk = true;
     inputList.forEach((elem) => { isOk = elem.validity.valid ? isOk : false });
     return isOk;
 }
 
-function showInputError(element, errorSpan) {
-    element.classList.add('popup__input_error');
-    errorSpan.classList.add('popup__error_active');
+function showInputError(element, errorSpan, selectors) {
+    element.classList.add(selectors.inputError.replace('.', ''));
+    errorSpan.classList.add(selectors.errorActiveSelector.replace('.', ''));
 }
 
-function hideInputError(element, errorSpan) {
-    element.classList.remove('popup__input_error');
-    errorSpan.classList.remove('popup__error_active');
+function hideInputError(element, errorSpan, selectors) {
+    element.classList.remove(selectors.inputError.replace('.', ''));
+    errorSpan.classList.remove(selectors.errorActiveSelector.replace('.', ''));
 }
 
-function isValid(input, spanError) {
+function isValid(input, spanError, selectors) {
+    console.log(selectors);
     if (!input.validity.valid) {
-        showInputError(input, spanError);
+        showInputError(input, spanError, selectors);
     } else {
-        hideInputError(input, spanError);
+        hideInputError(input, spanError, selectors);
     }
 }
 
-export function toggleSubmit(inputs, button) {
+export function toggleSubmit(inputs, button, classDisable) {
+    classDisable.replace('.', '');
     if (hasValidInput(inputs)) {
-        button.classList.remove('popup__submit_disabled');
+        button.classList.remove(classDisable);
         button.disabled = false;
     } else {
-        button.classList.add('popup__submit_disabled');
+        button.classList.add(classDisable);
         button.disabled = true;
     }
 }
 
-export function enableValidation(forms) {
+export function enableValidation(data) {
+    const forms = document.querySelectorAll(data.formSelector);
     forms.forEach((form) => {
-        const inputs = form.querySelectorAll('.popup__input');
-        const spans = form.querySelectorAll('.popup__error');
-        const buttonSubmit = form.querySelector('.popup__submit');
+        const inputs = form.querySelectorAll(data.inputSelector);
+        const spans = form.querySelectorAll(data.errorSpanSelector);
+        const buttonSubmit = form.querySelector(data.buttonSubmitSelector);
         for (let i = 0; i < inputs.length; ++i) {
             inputs[i].addEventListener('input', () => {
-                isValid(inputs[i], spans[i]);
-                toggleSubmit(inputs, buttonSubmit);
+                isValid(inputs[i], spans[i], data);
+                toggleSubmit(inputs, buttonSubmit, data.buttonClassDisabled);
             });
         }
     });

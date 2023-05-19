@@ -26,7 +26,7 @@
         <div class="popup__container">
             <button aria-label="Закрыть" type="button" class="popup__button-close"><img class="popup__image-close" src="<%=require('./images/close-icon.svg')%>" alt="Крестик"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
-            <form name="edit" action="#" method="post" novalidate>
+            <form class="popup__form" name="edit" action="#" method="post" novalidate>
                 <input class="popup__input popup__input_first" type="text" name="name" minlength="2" maxlength="40" required>
                 <span class="popup__error">Вы пропустили это поле</span>
                 <input class="popup__input" type="text" name="quote" minlength="2" maxlength="200" required>
@@ -39,7 +39,7 @@
         <div class="popup__container">
             <button aria-label="Закрыть" type="button" class="popup__button-close"><img class="popup__image-close" src="<%=require('./images/close-icon.svg')%>" alt="Крестик"></button>
             <h3 class="popup__title">Новое место</h3>
-            <form name="add" action="#" method="post" novalidate>
+            <form class="popup__form" name="add" action="#" method="post" novalidate>
                 <input class="popup__input popup__input_first" type="text" name="title" placeholder="Название" minlength="2" maxlength="30" required>
                 <span class="popup__error">Вы пропустили это поле</span>
                 <input class="popup__input" type="url" name="link" placeholder="Ссылка на картинку" required>
