@@ -72,7 +72,7 @@ export function deactivateLike(id) {
 }
 
 export function deleteCard(id) {
-    return fetch(`https://nomoreparties.co/v1/exp-mipt-fbc-1/cards/${id}`, {
+    return fetch(`${data.baseUrl}/cards/${id}`, {
         method: 'DELETE',
         headers: {authorization: data.headers.authorization}
     }).then(checkResponse)

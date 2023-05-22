@@ -3,6 +3,7 @@ import { initCards, renderCard } from "./card.js";
 import { enableValidation, toggleSubmit } from "./validate.js";
 import { closePopup, openPopup } from "./modal.js";
 import {addCard, editProfile, editProfileImage, getProfile, getStartCards} from "./api.js";
+import {showUpdating} from "./utils.js";
 
 export let userID;
 const profile = document.querySelector('.profile');
@@ -35,6 +36,7 @@ const cardName = popupAddCard.querySelector('input[name="title"]');
 const avatarLink = popupContainerEditAvatar.querySelector('input[name="link"]');
 const cardLink = popupAddCard.querySelector('input[name="link"]');
 export const domImage = popupOverview.querySelector('.popup__image');
+export const imageTitle = popupOverview.querySelector('.popup__title');
 const buttonEditAvatarClose = popupEditAvatar.querySelector('.popup__button-close');
 const buttonSubmitAdd = formAddCard.querySelector('.popup__submit');
 const buttonSubmitEdit = formProfileEdit.querySelector('.popup__submit');
@@ -46,15 +48,7 @@ const data = {
     errorActiveSelector: '.popup__error_active',
     buttonSubmitSelector: '.popup__submit',
     inputError: '.popup__input_error',
-    buttonClassDisabled: '.popup__button_disabled',
-}
-
-function showUpdating(isUpdating, elem, text) {
-    if (isUpdating) {
-        elem.textContent = text[1];
-    } else {
-        elem.textContent = text[0];
-    }
+    buttonClassDisabled: '.popup__submit_disabled',
 }
 
 buttonEdit.addEventListener('click', () => {
@@ -65,10 +59,6 @@ buttonEdit.addEventListener('click', () => {
 
 function submitFormProfileEdit(event) {
     event.preventDefault();
-    labelName.textContent = inputNameEdit.value;
-    labelQuote.textContent = inputQuoteEdit.value;
-    closePopup(popupProfileEdit);
-
     showUpdating(true, buttonSubmitEdit, "Сохранение...");
     editProfile(inputNameEdit.value, inputQuoteEdit.value)
         .then(() => {
@@ -88,9 +78,6 @@ function submitFormAddCard(event) {
         name: cardName.value,
         link: cardLink.value
     }
-    cardName.value = "";
-    cardLink.value = "";
-
     showUpdating(true, buttonSubmitAdd, "Создание...");
     addCard(cardInfo.name, cardInfo.link)
         .then(res => {
@@ -131,8 +118,9 @@ formEditAvatar.addEventListener('submit', (event) => {
     editProfileImage(avatarLink.value)
         .then(() => {
             avatar.src = avatarLink.value;
+            buttonSubmitEditAvatar.disabled = true;
             avatarLink.value = "";
-            closePopup(popupContainerEditAvatar);
+            closePopup(popupEditAvatar);
         })
         .finally(() => showUpdating(false, buttonSubmitEditAvatar, "Сохранить"))
         .catch((err) => {

@@ -17,7 +17,6 @@ function hideInputError(element, errorSpan, selectors) {
 }
 
 function isValid(input, spanError, selectors) {
-    console.log(selectors);
     if (!input.validity.valid) {
         showInputError(input, spanError, selectors);
     } else {
@@ -26,7 +25,7 @@ function isValid(input, spanError, selectors) {
 }
 
 export function toggleSubmit(inputs, button, classDisable) {
-    classDisable.replace('.', '');
+    classDisable = classDisable.replace('.', '');
     if (hasValidInput(inputs)) {
         button.classList.remove(classDisable);
         button.disabled = false;
